@@ -44,8 +44,10 @@ class EducationalPreview extends React.Component {
           <ul >
           {this.props.projects?.map((project, i) => {
             return <div className={styles['project-list']}>
-            <li  key={i}>{project.name} - </li>
-            <a href={project.link} target='_blank'>Link</a>
+            <li  key={i}>
+              <p>{project.name} - <a href={project.link} target='_blank'>Link</a> </p>
+            </li>
+            
             </div> 
           })}
           </ul>

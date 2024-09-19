@@ -54,7 +54,7 @@ class PersonalForm extends React.Component {
                     <div className={styles['website']}>
                         <input 
                           className={styles['input']}
-                          placeholder=' Your Website'
+                          placeholder=' Your Website or Github Link'
                           name="website"
                           value={this.props.info[3].value}
                           onChange={this.props.handleInfoChange}

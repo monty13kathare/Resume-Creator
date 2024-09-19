@@ -167,14 +167,14 @@ class App extends React.Component {
         { 
           isHovered: false,
           id: uniqid(),
-          name: "HireBuddy",
-          link: "link"
+          name: "",
+          link: ""
         },
         { 
           isHovered: false,
           id: uniqid(),
-          name: "Resume Buillder",
-          link: "link"
+          name: "",
+          link: ""
         },
        
        
@@ -587,6 +587,7 @@ class App extends React.Component {
         </div>
         <MobileToggle 
             handleToggle={this.handleToggle}
+            printDocument={this.printDocument}
             mobile={this.state.mobile} />
       </div>
     )

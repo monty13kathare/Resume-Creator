@@ -1,6 +1,6 @@
 .edu {
     box-sizing: border-box;
-    width: 31%;
+    width: 35%;
     height: 100%;
     text-align: left;
     gap: 24px;
@@ -51,6 +51,7 @@
     font-weight: 600;
     font-family: 'Work Sans', sans-serif;
     line-height: 1.5;
+    color: #1092dd;
 }
 
 .university h5,
@@ -91,8 +92,7 @@ ul {
 }
 
 ul li::marker {
-    font-size: 1.55em;
-    /* color: #fff; */
+    font-size: 1.2em;
 }
 .projects .project-list{
     display: flex;

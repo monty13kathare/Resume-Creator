@@ -116,6 +116,7 @@ input:focus {
 .add {
     width: 25%;
     border-radius: 12px;
+    font-size: 12px;
 }
 
 .divRemove {
@@ -150,5 +151,6 @@ input:focus {
 .imgButton {
     width: 1em;
     margin-right: 5%;
+    font-size: 12px;
 }
 
