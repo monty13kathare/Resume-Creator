@@ -64,7 +64,7 @@ class PersonalForm extends React.Component {
                         </input>
                     </div>
 
-                    <div className={styles['website']}>
+                    {/* <div className={styles['website']}>
                         <input 
                           className={styles['input']}
                           placeholder=' Your Github Link'
@@ -76,7 +76,7 @@ class PersonalForm extends React.Component {
                           required
                           >
                         </input>
-                    </div>
+                    </div> */}
             
                     <div className={styles['contact']}>
                         <input 
