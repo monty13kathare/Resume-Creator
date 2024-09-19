@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './practicalForm.module.css';
 import { ReactComponent as RemoveSVG } from '../../icons/remove.svg';
 import exampleSkills from '../../utils/exampleSkills';
+import exampleHobbies from '../../utils/exampleHobbies';
 
 class PracticalForm extends React.Component {
     constructor(props) {
@@ -12,6 +13,8 @@ class PracticalForm extends React.Component {
     }
 
     render() {
+
+      console.log('props.projects', this.props.projects)
         return (
             <div className={styles['practicalForm']}>
                 <h2>Practical Experience</h2>
@@ -170,6 +173,118 @@ class PracticalForm extends React.Component {
                       }
 
                     </div>
+
+                  {/* Hobbies */}
+                    <div className={styles['skillList']}>
+<div className={styles['headline']}>
+  <img src={require("../../icons/skills.png")} className={styles['icon']} alt="Skills Icon"/>
+  <h3>Soft Skills & Hobbies</h3>
+</div>
+
+<div className={styles['skills']}>
+{this.props.hobbies?.map((hobby, index) => (
+  <div className={styles['skill']} key={index}>
+    <input
+      className={styles['input']}
+      placeholder={exampleHobbies[index]}
+      value={hobby.hobby}
+      onChange={this.props.handleHobbyChange}
+      name="hobby"
+      id={hobby.id}
+      type="text"
+      required>
+    </input>
+
+    
+    {this.props.hobbies?.length > 1 &&
+      <button 
+        type="button" 
+        name="removeHobby"
+        title="remove"
+        id={hobby.id}
+        className={styles['buttonRemove']} 
+        onMouseEnter={this.props.handleMouseHobbies} 
+        onMouseLeave={this.props.handleMouseHobbies}
+        onClick={() => this.props.removeHobby(index)}>
+          <RemoveSVG 
+            style={{ fill: this.props.hobbies[index].isHovered ? "#79d2b5" : "#a6a6a6" }} 
+            className={styles['imgRemove']}/>
+       </button>
+    }
+  </div>
+))}
+</div>
+
+{this.props.hobbies?.length < 9 &&
+    <button type="button" className={styles['add']} onClick={this.props.addHobby} aria-label="Close" alt="remove">
+      <img src={require("../../icons/plus.png")} className={styles['imgButton']} alt="Add Icon"/>New
+    </button>
+}
+
+                   </div>
+
+                     {/* Project */}
+                     <div className={styles['skillList']}>
+<div className={styles['headline']}>
+  <img src={require("../../icons/skills.png")} className={styles['icon']} alt="Skills Icon"/>
+  <h3>Other Projects</h3>
+</div>
+
+<div className={styles['skills']}>
+{this.props.projects?.map((project, index) => (
+  <div className={styles['skill']} key={index}>
+    <div className={styles['project-input']}>
+    <input
+      className={styles['input']}
+      placeholder="Enter Project Name"
+      value={project.name}
+      onChange={this.props.handleProjectChange}
+      name="name"
+      id={project.id}
+      type="text"
+      >
+    </input>
+    <input
+      className={styles['input']}
+      placeholder="Enter Project Link or Url"
+      value={project.link}
+      onChange={this.props.handleProjectChange}
+      name="link"
+      id={project.id}
+      type="text"
+      >
+    </input>
+    </div>
+   
+  
+
+    
+    {this.props.projects?.length > 1 &&
+      <button 
+        type="button" 
+        name="removeHobby"
+        title="remove"
+        id={project.id}
+        className={styles['buttonRemove']} 
+        // onMouseEnter={this.props.handleMouseHobbies} 
+        // onMouseLeave={this.props.handleMouseHobbies}
+        onClick={() => this.props.removeProject(index)}>
+          <RemoveSVG 
+            style={{ fill: this.props.projects[index].isHovered ? "#79d2b5" : "#a6a6a6" }} 
+            className={styles['imgRemove']}/>
+       </button>
+    }
+  </div>
+))}
+</div>
+
+{this.props.projects?.length < 9 &&
+    <button type="button" className={styles['add']} onClick={this.props.addProject} aria-label="Close" alt="remove">
+      <img src={require("../../icons/plus.png")} className={styles['imgButton']} alt="Add Icon"/>New
+    </button>
+}
+
+                   </div>
                 </form>
             </div>
         )

@@ -45,6 +45,10 @@ h3 {
 .skill {
     display: flex;
 }
+.skill .project-input {
+    display: flex;
+    gap: 4px;
+}
 
 .skill .buttonRemove {
     margin-bottom: 0;

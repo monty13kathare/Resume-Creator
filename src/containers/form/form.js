@@ -30,14 +30,33 @@ class Form extends React.Component {
           <PracticalForm 
             experience={this.props.experience} 
             skills={this.props.skills} 
+            hobbies={this.props.hobbies} 
+            projects={this.props.projects} 
+
+
             addWork={this.props.addWork} 
             removeWork={this.props.removeWork} 
             handleMouse={this.props.handleMouse} 
             handleWorkChange={this.props.handleWorkChange}
             handleMouseSkills={this.props.handleMouseSkills}
+            handleMouseHobbies={this.props.handleMouseHobbies}
+
             addSkill={this.props.addSkill}
+            addHobby={this.props.addHobby}
+            addProject={this.props.addProject}
+
+
             removeSkill={this.props.removeSkill}
-            handleSkillChange={this.props.handleSkillChange} />
+            removeHobby={this.props.removeHobby}
+            removeProject={this.props.removeProject}
+
+
+            handleSkillChange={this.props.handleSkillChange} 
+            handleHobbyChange={this.props.handleHobbyChange} 
+            handleProjectChange={this.props.handleProjectChange} 
+
+
+            />
       </div>
     )
   }

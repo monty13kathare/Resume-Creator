@@ -13,7 +13,7 @@ class AppLabel extends React.Component {
         return (
             <div className={styles['label']}>
                 <div className={styles['label-header']}>
-                  <h2>CV Creator</h2>
+                  <h2>Resume Creator</h2>
                   <div>
                     <button className={styles['save']} type="button" onClick={this.props.printDocument}>
                         <img src={require("../../icons/save.png")} className={styles['download']} alt="Download"></img>

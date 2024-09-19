@@ -29,7 +29,7 @@ class HeaderPreview extends React.Component {
             <p>
             <i class="material-symbols-outlined">alternate_email</i> {this.props.info[4].value}
             </p>
-            <a href='#'>
+            <a href='https://github.com/monty13kathare' target='_blank'>
             <i class="material-symbols-outlined">link</i>{this.props.info[13].value}
             </a>
           </div>

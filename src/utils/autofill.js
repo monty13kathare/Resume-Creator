@@ -150,11 +150,56 @@ const autofilledState = {
       },
     ],
 
-    newSkill: {
+    hobbies: [
+      { 
+        isHovered: false,
+        id: uniqid(),
+        hobby: "Ability to work with a team."
+      },
+      { 
+        isHovered: false,
+        id: uniqid(),
+        hobby: "Creative thinking & well dedicated."
+      },
+      { 
+        isHovered: false,
+        id: uniqid(),
+        hobby: "Time Management"
+      },
+     
+     
+    ],
+
+    newHobby: {
       isHovered: false,
       id: uniqid(),
-      skill: ""
-    }
+      hobby: ""
+    },
+
+    projects: [
+      { 
+        isHovered: false,
+        id: uniqid(),
+        name: "Project Name",
+        link: "http://project.com"
+      },
+      { 
+        isHovered: false,
+        id: uniqid(),
+        name: "Project Name 2",
+        link: "http://project2.com"
+      },
+     
+     
+     
+    ],
+
+    newProject: {
+      isHovered: false,
+      id: uniqid(),
+      name: "",
+      link: "",
+    },
 }
 
 export default autofilledState;

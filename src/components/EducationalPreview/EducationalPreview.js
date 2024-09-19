@@ -12,33 +12,18 @@ class EducationalPreview extends React.Component {
   render() {
     return (
       <div className={styles['edu']}>
-        <div className={styles['contact']}>
-          <h3 className={styles['section-h3']}>CONTACT</h3>
+      
 
-          <div className={styles['details']}>
-           <div className={styles['detail']}>
-              <img src={require("../../icons/website.png")} className={styles['detailImg']} alt="website"></img>
-              <p>{this.props.info[3].value}</p>
-            </div>
-
-            <div className={styles['detail']}>
-              <img src={require("../../icons/email.png")} className={styles['detailImg']} alt="email"></img>
-              <p>{this.props.info[4].value}</p>
-            </div>
-
-            <div className={styles['detail']}>
-            <img src={require("../../icons/address.png")} className={styles['detailImg']} alt="address"></img>
-              <p>{this.props.info[2].value}</p>
-            </div>
-
-            <div className={styles['detail']}>
-            <img src={require("../../icons/phone.png")} className={styles['detailImg']} alt="Phone number"></img>
-              <p>{this.props.info[5].value}</p>
-            </div>
+         <div className={styles['skill-preview']}>
+          <h3 className={styles['section-h3']}>SKILLS</h3>
+          <div className={styles['skill-box']}>
+          {this.props.skills.map((skill, i) => {
+            return <p className={styles['skill']} key={i}>{skill.skill}</p>
+          })}
           </div>
         </div>
 
-        <div className={styles['education']}>
+         <div className={styles['education']}>
           <h3 className={styles['section-h3']}>EDUCATION</h3>
 
           <div className={styles['university']}>
@@ -54,15 +39,27 @@ class EducationalPreview extends React.Component {
           </div>
         </div>
 
-        <div className={styles['skill-preview']}>
-          <h3 className={styles['section-h3']}>SKILLS</h3>
-
-          <ul className={styles['skillList']}>
-          {this.props.skills.map((skill, i) => {
-            return <li key={i}>{skill.skill}</li>
+        <div className={styles['projects']}>
+          <h3 className={styles['section-h3']}>OTHER PROJECTS</h3>
+          <ul >
+          {this.props.projects?.map((project, i) => {
+            return <div className={styles['project-list']}>
+            <li  key={i}>{project.name} - </li>
+            <a href={project.link} target='_blank'>Link</a>
+            </div> 
           })}
           </ul>
         </div>
+
+        <div className={styles['hobbies']}>
+          <h3 className={styles['section-h3']}>SOFT SKILL & HOBBIES</h3>
+          <ul >
+          {this.props.hobbies?.map((hobby, i) => {
+            return <li className={styles['hobby']} key={i}>{hobby.hobby}</li>
+          })}
+          </ul>
+        </div>
+    
       </div>
     )
   }
